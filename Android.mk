@@ -19,7 +19,7 @@ LOCAL_PACKAGE_NAME := TimeKeep
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 ifeq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 28 ))" )))
-LOCAL_SDK_VERSION := current
+    LOCAL_PRIVATE_PLATFORM_APIS := true
 endif
 LOCAL_PROGUARD_ENABLED := disabled
 include $(BUILD_PACKAGE)
